@@ -5,21 +5,21 @@ def Game(comp, you):
         return None
 
     elif comp=="Rock":
-        if you=="p":
+        if you=="Paper":
             return True
-        elif you =="s":
+        elif you =="Scissors":
             return False   
 
     elif comp=="Paper":
-        if you=="r":
+        if you=="Rock":
             return False
-        elif you =="s":
+        elif you =="Scissors":
             return True    
 
     elif comp=="Scissors":
-        if you=="p":
+        if you=="Paper":
             return False
-        elif you =="r":
+        elif you =="Rock":
             return True    
 
 print("Computer's Turn -> Rock / Paper / Scissors (computer has decided)")
@@ -35,14 +35,14 @@ if n==3:
 
 you=input("Your Turn -> Rock(r) / Paper(p) / Scissors(s) : ")
 if you=="r":
-    your_choice="Rock"
+    you="Rock"
 elif you=="p":
-    your_choice="Paper"
+    you="Paper"
 elif you=="s":
-    your_choice="Scissors"
+    you="Scissors"
 
 print("Computer's choice is : ", comp)
-print("Your choice is : ", your_choice)
+print("Your choice is : ", you)
 
 result=Game(comp, you)
 if result==None:
